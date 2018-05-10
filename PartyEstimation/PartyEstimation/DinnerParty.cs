@@ -9,9 +9,29 @@ namespace PartyEstimation
     class DinnerParty
     {
         const int CostOfFoodPerPerson = 25;
-        public int NumberOfPeople;
+        private int numberOfPeople;
+        public int NumberOfPeople
+        {
+            get { return numberOfPeople; }
+            set
+            {
+                numberOfPeople = value;
+                CalculateCostOfDecorations(fancyDecortions);
+            }
+        }
+
+        private bool fancyDecortions;
+
         public decimal CostOfBveragesPerPerson;
-        public decimal CostOfDecorations;
+        public decimal CostOfDecorations = 0;
+
+        public DinnerParty(int numberOfPeople, bool healthyOption, bool fancyDecorations)
+        {
+            NumberOfPeople = numberOfPeople;
+            this.fancyDecortions = fancyDecortions;
+            SetHealthyOption(healthyOption);
+            CalculateCostOfDecorations(fancyDecorations);
+        }
 
         public void SetHealthyOption(bool healthyOption)
         {
@@ -48,6 +68,11 @@ namespace PartyEstimation
             {
                 return totalCost;
             }
+        }
+
+        public virtual void Test()
+        {
+
         }
     }
 }
