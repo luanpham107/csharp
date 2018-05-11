@@ -7,97 +7,65 @@ using System.Windows.Forms;
 
 namespace PartyEstimation
 {
-    class BirthdayParty
-    {
-        public const int CostOfFoodPerPerson = 25;
-        public decimal CostOfDecorations = 0;
-        private bool fancyDecorations;
-        public int CakeSize;
-
-        
+    class BirthdayParty : Party
+    {       
         public BirthdayParty(int numberOfPeople, bool fancyDecorations, string cakeWriting)
         {
-            this.NumberOfPeople = numberOfPeople;
-            this.fancyDecorations = fancyDecorations;
-            this.CakeWriting = cakeWriting;
+            NumberOfPeople = numberOfPeople;
+            this.FancyDecorations = fancyDecorations;
+            CakeWriting = cakeWriting;
         }
 
-        private void CalculateCakeSize()
-        {
-            if(NumberOfPeople <= 4)
-            {
-                CakeSize = 8;
-            }
-            else
-            {
-                CakeSize = 16;
-            }
-        }
+        public string CakeWriting { get; set; }
 
-        private string cakeWriting = "";
-        public string CakeWriting
+        private int ActualLength
         {
             get
             {
-                return this.cakeWriting;
-            }
-            set
-            {
-                int maxLength;
-                if (CakeSize == 8)
-                    maxLength = 16;
+                if (CakeWriting.Length > MaxWritingLength())
+                    return MaxWritingLength();
                 else
-                    maxLength = 40;
-
-                if (value.Length > maxLength)
-                {
-                    MessageBox.Show("Too many letter for a " + CakeSize + " inch cake");
-                    if (maxLength > this.cakeWriting.Length)
-                        maxLength = this.cakeWriting.Length;
-                    this.cakeWriting = cakeWriting.Substring(0, maxLength);
-                }
-                else
-                    this.cakeWriting = value;
+                    return CakeWriting.Length;
             }
         }
-
-        public decimal CalculateCost()
+        private int CakeSize()
         {
-            decimal TotalCost = CostOfDecorations + (CostOfFoodPerPerson * NumberOfPeople);
-            decimal CakeCost;
-            if(CakeSize == 8)
-            {
-                CakeCost = 40M + cakeWriting.Length * 0.25M;
-            }
+            if (NumberOfPeople <= 4)
+                return 8;
             else
-                CakeCost = 75M + cakeWriting.Length * 0.25M;
-            return TotalCost + CakeCost;
+                return 16;
+        }
+        
+        private int MaxWritingLength()
+        {
+            if (CakeSize() == 8)
+                return 16;
+            else
+                return 40;
         }
 
-        private int numberOfPeople;
-        public int NumberOfPeople
+        public bool CakeWritingTooLong
         {
             get
             {
-                return this.numberOfPeople;
-            }
-            set
-            {
-                numberOfPeople = value;
-                CalculateCostOfDecorations(fancyDecorations);
-                CalculateCakeSize();
-                this.cakeWriting = cakeWriting;
-                
+                if (CakeWriting.Length > MaxWritingLength())
+                    return true;
+                else
+                    return false;
             }
         }
 
-        public void CalculateCostOfDecorations(bool fancy)
+        public override decimal Cost()
         {
-            fancyDecorations = fancy;
-            if (fancy)
-                CostOfDecorations = (NumberOfPeople * 15.00M) + 50M;
+            
+                decimal totalCost = base.Cost();
+                decimal cakeCost;
+            if (CakeSize() == 8)
+                cakeCost = 40M + ActualLength * .25M;
             else
-                CostOfDecorations = (NumberOfPeople * 7.5M) + 30M;
+                cakeCost = 75M + ActualLength * .25M;
+            return totalCost + cakeCost;
+            
         }
 
     }

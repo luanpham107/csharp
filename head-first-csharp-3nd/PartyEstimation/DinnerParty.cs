@@ -6,73 +6,36 @@ using System.Threading.Tasks;
 
 namespace PartyEstimation
 {
-    class DinnerParty
-    {
-        const int CostOfFoodPerPerson = 25;
-        private int numberOfPeople;
-        public int NumberOfPeople
-        {
-            get { return numberOfPeople; }
-            set
-            {
-                numberOfPeople = value;
-                CalculateCostOfDecorations(fancyDecortions);
-            }
-        }
-
-        private bool fancyDecortions;
-
-        public decimal CostOfBveragesPerPerson;
-        public decimal CostOfDecorations = 0;
+    class DinnerParty : Party
+    {    
+        public bool HealthyOption { get; set; }
 
         public DinnerParty(int numberOfPeople, bool healthyOption, bool fancyDecorations)
         {
             NumberOfPeople = numberOfPeople;
-            this.fancyDecortions = fancyDecortions;
-            SetHealthyOption(healthyOption);
-            CalculateCostOfDecorations(fancyDecorations);
+            FancyDecorations = fancyDecorations;
+            HealthyOption = healthyOption;
         }
 
-        public void SetHealthyOption(bool healthyOption)
+       public decimal CalculateCostOfBeveragesPerPerson()
         {
-            if (healthyOption)
-            {
-                CostOfBveragesPerPerson = 5.0M;
-            }
+            decimal costOfBeveragesPerPerson;
+            if (HealthyOption)
+                costOfBeveragesPerPerson = 5.00M;
             else
-            {
-                CostOfBveragesPerPerson = 20.00M;
-            }
+                costOfBeveragesPerPerson = 20.00M;
+            return costOfBeveragesPerPerson;
         }
 
-        public void CalculateCostOfDecorations(bool fancy)
+       
+        public decimal Cost()
         {
-            if (fancy)
-            {
-                CostOfDecorations = (NumberOfPeople * 15.00M) + 50M;
-            }
-            else
-            {
-                CostOfDecorations = (NumberOfPeople * 7.50M) + 30M;
-            }
+            decimal totalCost = base.Cost();
+            totalCost += CalculateCostOfBeveragesPerPerson() * NumberOfPeople;
+            if (HealthyOption)
+                totalCost *= 0.95M;
+            return totalCost;
         }
-
-        public decimal CalculateCost(bool healthyOption)
-        {
-            decimal totalCost = CostOfDecorations + ((CostOfBveragesPerPerson + CostOfFoodPerPerson) * NumberOfPeople);
-            if (healthyOption)
-            {
-                return totalCost * 0.95M;
-            }
-            else
-            {
-                return totalCost;
-            }
-        }
-
-        public virtual void Test()
-        {
-
-        }
+        
     }
 }

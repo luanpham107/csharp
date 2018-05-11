@@ -19,8 +19,8 @@ namespace PartyEstimation
         {
             InitializeComponent();
             dinnerParty = new DinnerParty(5, radioButton_HealthyOption.Checked, radioButton_FancyDecor.Checked);            
-            dinnerParty.SetHealthyOption(radioButton_HealthyOption.Checked);
-            dinnerParty.CalculateCostOfDecorations(radioButton_FancyDecor.Checked);
+            //dinnerParty.SetHealthyOption(radioButton_HealthyOption.Checked);
+            dinnerParty.Cost();
             DisplayDinnerPartyCost();
 
             birthdayParty = new BirthdayParty((int)numericUpDown_birthdayPeopleNum.Value, 
@@ -31,26 +31,30 @@ namespace PartyEstimation
         // Dinner Party cost
         private void DisplayDinnerPartyCost()
         {
-            decimal Cost = dinnerParty.CalculateCost(radioButton_HealthyOption.Checked);
+            decimal Cost = dinnerParty.Cost();
             label_Cost.Text = Cost.ToString("c");
         }
 
         private void radioButton_FancyDecor_CheckedChanged(object sender, EventArgs e)
         {
-            dinnerParty.CalculateCostOfDecorations(radioButton_FancyDecor.Checked);
+            //dinnerParty.CalculateCostOfDecorations(radioButton_FancyDecor.Checked);
+            dinnerParty.FancyDecorations = radioButton_FancyDecor.Checked;
+            dinnerParty.Cost();
             DisplayDinnerPartyCost();
         }
 
         private void radioButton_HealthyOption_CheckedChanged(object sender, EventArgs e)
         {
-            dinnerParty.SetHealthyOption(radioButton_HealthyOption.Checked);
+            //dinnerParty.SetHealthyOption(radioButton_HealthyOption.Checked);
+            dinnerParty.HealthyOption = radioButton_HealthyOption.Checked;
+            dinnerParty.Cost();
             DisplayDinnerPartyCost();
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
             dinnerParty.NumberOfPeople = (int)numericUpDown1.Value;
-            decimal Cost = dinnerParty.CalculateCost(radioButton_HealthyOption.Checked);
+            decimal Cost = dinnerParty.Cost();
             label_Cost.Text = Cost.ToString("c");
         }
 
@@ -65,14 +69,15 @@ namespace PartyEstimation
 
         public void DisplayBirthdayPartyCost()
         {
-            decimal cost = birthdayParty.CalculateCost();
+            decimal cost = birthdayParty.Cost();
             label_BirthdayCostOut.Text = cost.ToString("c");
 
         }
 
         private void checkBox_birthdayFanDecor_CheckedChanged(object sender, EventArgs e)
         {
-            birthdayParty.CalculateCostOfDecorations(checkBox_birthdayFanDecor.Checked);
+            birthdayParty.FancyDecorations = checkBox_birthdayFanDecor.Checked;
+            birthdayParty.Cost();
             DisplayBirthdayPartyCost();
         }
        
