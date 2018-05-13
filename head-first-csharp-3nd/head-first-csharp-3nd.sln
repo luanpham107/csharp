@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartyEstimation", "PartyEstimation\PartyEstimation.csproj", "{A3DFEC51-9EC9-40B1-BB85-797511E24452}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypingGame", "..\..\TypingGame\TypingGame\TypingGame.csproj", "{EE78347E-5EDD-40E7-87B6-1832720CB219}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06PartyEstimation", "PartyEstimation\06PartyEstimation.csproj", "{A3DFEC51-9EC9-40B1-BB85-797511E24452}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADayAtTheRace", "ADayAtTheRace\ADayAtTheRace.csproj", "{AE6E4100-7423-4A63-975C-80380353EFBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypingGame", "TypingGame\TypingGame.csproj", "{EE78347E-5EDD-40E7-87B6-1832720CB219}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06BeehiveManagement", "BeehiveManagement\06BeehiveManagement.csproj", "{EC4A0DA7-A5E7-4D12-9D8A-C4C38B89D581}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +21,18 @@ Global
 		{A3DFEC51-9EC9-40B1-BB85-797511E24452}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3DFEC51-9EC9-40B1-BB85-797511E24452}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3DFEC51-9EC9-40B1-BB85-797511E24452}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EE78347E-5EDD-40E7-87B6-1832720CB219}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EE78347E-5EDD-40E7-87B6-1832720CB219}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EE78347E-5EDD-40E7-87B6-1832720CB219}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EE78347E-5EDD-40E7-87B6-1832720CB219}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AE6E4100-7423-4A63-975C-80380353EFBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AE6E4100-7423-4A63-975C-80380353EFBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE6E4100-7423-4A63-975C-80380353EFBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE6E4100-7423-4A63-975C-80380353EFBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE78347E-5EDD-40E7-87B6-1832720CB219}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE78347E-5EDD-40E7-87B6-1832720CB219}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE78347E-5EDD-40E7-87B6-1832720CB219}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE78347E-5EDD-40E7-87B6-1832720CB219}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC4A0DA7-A5E7-4D12-9D8A-C4C38B89D581}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC4A0DA7-A5E7-4D12-9D8A-C4C38B89D581}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC4A0DA7-A5E7-4D12-9D8A-C4C38B89D581}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC4A0DA7-A5E7-4D12-9D8A-C4C38B89D581}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

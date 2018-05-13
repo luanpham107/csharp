@@ -1,0 +1,10 @@
+D:\05_Projects\csharp\head-first-csharp-3nd\BeehiveManagement\bin\Debug\BeehiveManagement.exe.config
+D:\05_Projects\csharp\head-first-csharp-3nd\BeehiveManagement\bin\Debug\BeehiveManagement.exe
+D:\05_Projects\csharp\head-first-csharp-3nd\BeehiveManagement\bin\Debug\BeehiveManagement.pdb
+D:\05_Projects\csharp\head-first-csharp-3nd\BeehiveManagement\obj\Debug\BeehiveManagement.Form1.resources
+D:\05_Projects\csharp\head-first-csharp-3nd\BeehiveManagement\obj\Debug\BeehiveManagement.Properties.Resources.resources
+D:\05_Projects\csharp\head-first-csharp-3nd\BeehiveManagement\obj\Debug\06BeehiveManagement.csproj.GenerateResource.cache
+D:\05_Projects\csharp\head-first-csharp-3nd\BeehiveManagement\obj\Debug\06BeehiveManagement.csproj.CoreCompileInputs.cache
+D:\05_Projects\csharp\head-first-csharp-3nd\BeehiveManagement\obj\Debug\BeehiveManagement.exe
+D:\05_Projects\csharp\head-first-csharp-3nd\BeehiveManagement\obj\Debug\BeehiveManagement.pdb
+D:\05_Projects\csharp\head-first-csharp-3nd\BeehiveManagement\obj\Debug\06BeehiveManagement.csprojAssemblyReference.cache
