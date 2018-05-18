@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxShowDescription = new System.Windows.Forms.TextBox();
             this.buttonGoHere = new System.Windows.Forms.Button();
-            this.comboBoxGoHere = new System.Windows.Forms.ComboBox();
+            this.comboBoxLocation = new System.Windows.Forms.ComboBox();
             this.buttonGoThroughTheDoor = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // textBoxShowDescription
             // 
-            this.textBox1.Location = new System.Drawing.Point(13, 13);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(314, 166);
-            this.textBox1.TabIndex = 0;
+            this.textBoxShowDescription.Location = new System.Drawing.Point(13, 13);
+            this.textBoxShowDescription.Multiline = true;
+            this.textBoxShowDescription.Name = "textBoxShowDescription";
+            this.textBoxShowDescription.Size = new System.Drawing.Size(314, 166);
+            this.textBoxShowDescription.TabIndex = 0;
+            this.textBoxShowDescription.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // buttonGoHere
             // 
@@ -51,13 +52,13 @@
             this.buttonGoHere.Text = "Go here:";
             this.buttonGoHere.UseVisualStyleBackColor = true;
             // 
-            // comboBoxGoHere
+            // comboBoxLocation
             // 
-            this.comboBoxGoHere.FormattingEnabled = true;
-            this.comboBoxGoHere.Location = new System.Drawing.Point(110, 187);
-            this.comboBoxGoHere.Name = "comboBoxGoHere";
-            this.comboBoxGoHere.Size = new System.Drawing.Size(217, 21);
-            this.comboBoxGoHere.TabIndex = 2;
+            this.comboBoxLocation.FormattingEnabled = true;
+            this.comboBoxLocation.Location = new System.Drawing.Point(110, 187);
+            this.comboBoxLocation.Name = "comboBoxLocation";
+            this.comboBoxLocation.Size = new System.Drawing.Size(217, 21);
+            this.comboBoxLocation.TabIndex = 2;
             // 
             // buttonGoThroughTheDoor
             // 
@@ -74,9 +75,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(339, 255);
             this.Controls.Add(this.buttonGoThroughTheDoor);
-            this.Controls.Add(this.comboBoxGoHere);
+            this.Controls.Add(this.comboBoxLocation);
             this.Controls.Add(this.buttonGoHere);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxShowDescription);
             this.Name = "Form1";
             this.Text = "Explore the House";
             this.ResumeLayout(false);
@@ -86,9 +87,9 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxShowDescription;
         private System.Windows.Forms.Button buttonGoHere;
-        private System.Windows.Forms.ComboBox comboBoxGoHere;
+        private System.Windows.Forms.ComboBox comboBoxLocation;
         private System.Windows.Forms.Button buttonGoThroughTheDoor;
     }
 }
