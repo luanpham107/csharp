@@ -51,6 +51,7 @@
             this.buttonGoHere.TabIndex = 1;
             this.buttonGoHere.Text = "Go here:";
             this.buttonGoHere.UseVisualStyleBackColor = true;
+            this.buttonGoHere.Click += new System.EventHandler(this.buttonGoHere_Click);
             // 
             // comboBoxLocation
             // 

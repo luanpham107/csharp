@@ -12,6 +12,7 @@ namespace _06ExploreTheHouse
 {
     public partial class Form1 : Form
     {
+        Location currentLocation;
         RoomWithDoor livingRoom;
         Room diningRoom;
         RoomWithDoor kitchen;
@@ -26,6 +27,7 @@ namespace _06ExploreTheHouse
            
 
             CreateObjects();
+            MoveToNewLocation(livingRoom);
 
 
         }
@@ -52,14 +54,31 @@ namespace _06ExploreTheHouse
             backYard.DoorLocation = kitchen;
         }
 
-        private void MoveToNewLocation()
+        private void MoveToNewLocation(Location newLocation)
         {
             comboBoxLocation.Items.Clear();
+            currentLocation = newLocation;
+
+            for(int i = 0; i < currentLocation.Exits.Length; i++)            
+                comboBoxLocation.Items.Add(currentLocation.Exits[i].Name);
+            comboBoxLocation.SelectedIndex = 0;
+            textBoxShowDescription.Text = currentLocation.Description;
+
+            if (currentLocation is IHasExteriorDoor)
+                buttonGoThroughTheDoor.Visible = true;
+            else
+                buttonGoThroughTheDoor.Visible = false;
+                    
 
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+        }
+
+        private void buttonGoHere_Click(object sender, EventArgs e)
+        {
+            MoveToNewLocation(currentLocation.Exits[comboBoxLocation.SelectedIndex]);
         }
     }
 }
