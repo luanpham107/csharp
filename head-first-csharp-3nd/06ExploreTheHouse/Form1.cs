@@ -17,9 +17,17 @@ namespace _06ExploreTheHouse
         Room diningRoom;
         RoomWithDoor kitchen;
 
+        RoomWithHidingPlace upstairsHallway;
+
+        RoomWithHidingPlace bedRoomMaster;
+        RoomWithHidingPlace bedRoomSmall;
+        RoomWithHidingPlace bathRoom;
+
+        OutsideWithHidingPlace driveWay;
+
         OutsideWithDoor frontYard;
         OutsideWithDoor backYard;
-        Outside garden;
+        OutsideWithHidingPlace garden;
 
         public Form1()
         {
@@ -38,15 +46,25 @@ namespace _06ExploreTheHouse
             diningRoom = new Room("DiningRoom", "1 table and 8 chairs");
             kitchen = new RoomWithDoor("Kitchen", "2 large sinks", "door to back yard");
 
+            upstairsHallway = new RoomWithHidingPlace("Upstair Hallway", "LED iluminating", "picture of a dog");
+            bedRoomMaster = new RoomWithHidingPlace("Large Bedroom", "with master bedroom", "under the bed");
+            bedRoomSmall = new RoomWithHidingPlace("Small bedroom", "small bed", "under the bed");
+            bathRoom = new RoomWithHidingPlace("Bathroom", "with a sink and a toilet", "in the shower");
+            driveWay = new OutsideWithHidingPlace("drive way", false, "garage");
+
             frontYard = new OutsideWithDoor("front yard", true, "front yard is connected to living room");
             backYard = new OutsideWithDoor("back yard", false, "back yard is connected to Kitchen");
-            garden = new Outside("garden", true);
+            garden = new OutsideWithHidingPlace("garden", true, " shed");
 
-            livingRoom.Exits = new Location[] { frontYard, backYard};
-            frontYard.Exits = new Location[] { livingRoom };
+            livingRoom.Exits = new Location[] { frontYard, backYard, upstairsHallway};
+            frontYard.Exits = new Location[] { livingRoom, driveWay };
             diningRoom.Exits = new Location[] { livingRoom, kitchen };
             kitchen.Exits = new Location[] { diningRoom, backYard };
-            backYard.Exits = new Location[] { kitchen };
+            backYard.Exits = new Location[] { kitchen, driveWay };
+            upstairsHallway.Exits = new Location[] {bedRoomMaster, bedRoomSmall, bathRoom };
+            bedRoomMaster.Exits = new Location[] { upstairsHallway };
+            bathRoom.Exits = new Location[] { upstairsHallway };
+            bedRoomSmall.Exits = new Location[] { upstairsHallway };
 
             livingRoom.DoorLocation = frontYard;
             kitchen.DoorLocation = backYard;
@@ -58,19 +76,27 @@ namespace _06ExploreTheHouse
         {
             comboBoxLocation.Items.Clear();
             currentLocation = newLocation;
+            try
+            {
+                for (int i = 0; i < currentLocation.Exits.Length; i++)
+                    comboBoxLocation.Items.Add(currentLocation.Exits[i].Name);
+                comboBoxLocation.SelectedIndex = 0;
+                textBoxShowDescription.Text = currentLocation.Description;
 
-            for(int i = 0; i < currentLocation.Exits.Length; i++)            
-                comboBoxLocation.Items.Add(currentLocation.Exits[i].Name);
-            comboBoxLocation.SelectedIndex = 0;
-            textBoxShowDescription.Text = currentLocation.Description;
+                if (currentLocation is IHasExteriorDoor)
+                    buttonGoThroughTheDoor.Visible = true;
+                else
+                    buttonGoThroughTheDoor.Visible = false;
 
-            if (currentLocation is IHasExteriorDoor)
-                buttonGoThroughTheDoor.Visible = true;
-            else
-                buttonGoThroughTheDoor.Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
                     
 
-        }
+        }       
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
