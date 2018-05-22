@@ -9,7 +9,7 @@ namespace _06ExploreTheHouse
     class Opponent
     {
         private Location myLocation;
-        private Random random = new Random();
+        private Random random;
 
         public Opponent(Location startLocation, Random random)
         {

@@ -21,7 +21,8 @@ namespace _06ExploreTheHouse
         {
             get
             {
-                return "You  see " + decoration + ".";
+                return "You  see " + decoration + "." + "\r\n" 
+                    + "Someone can hide in " + NameOfHidingPlace;
             }
         }
 

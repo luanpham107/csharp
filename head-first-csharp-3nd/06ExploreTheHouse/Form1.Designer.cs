@@ -32,6 +32,8 @@
             this.buttonGoHere = new System.Windows.Forms.Button();
             this.comboBoxLocation = new System.Windows.Forms.ComboBox();
             this.buttonGoThroughTheDoor = new System.Windows.Forms.Button();
+            this.buttonCheck = new System.Windows.Forms.Button();
+            this.buttonHide = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxShowDescription
@@ -70,11 +72,35 @@
             this.buttonGoThroughTheDoor.Text = "Go through the door";
             this.buttonGoThroughTheDoor.UseVisualStyleBackColor = true;
             // 
+            // buttonCheck
+            // 
+            this.buttonCheck.Location = new System.Drawing.Point(13, 246);
+            this.buttonCheck.Name = "buttonCheck";
+            this.buttonCheck.Size = new System.Drawing.Size(314, 23);
+            this.buttonCheck.TabIndex = 4;
+            this.buttonCheck.Text = "Check";
+            this.buttonCheck.UseVisualStyleBackColor = true;
+            this.buttonCheck.Enabled = false;
+            this.buttonCheck.Click += new System.EventHandler(this.buttonCheck_Click);
+            // 
+            // buttonHide
+            // 
+            this.buttonHide.Location = new System.Drawing.Point(13, 276);
+            this.buttonHide.Name = "buttonHide";
+            this.buttonHide.Size = new System.Drawing.Size(314, 23);
+            this.buttonHide.TabIndex = 5;
+            this.buttonHide.Text = "Hide";
+            this.buttonHide.UseVisualStyleBackColor = true;
+            this.buttonHide.Enabled = true;
+            this.buttonHide.Click += new System.EventHandler(this.buttonHide_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(339, 255);
+            this.ClientSize = new System.Drawing.Size(339, 314);
+            this.Controls.Add(this.buttonHide);
+            this.Controls.Add(this.buttonCheck);
             this.Controls.Add(this.buttonGoThroughTheDoor);
             this.Controls.Add(this.comboBoxLocation);
             this.Controls.Add(this.buttonGoHere);
@@ -92,6 +118,8 @@
         private System.Windows.Forms.Button buttonGoHere;
         private System.Windows.Forms.ComboBox comboBoxLocation;
         private System.Windows.Forms.Button buttonGoThroughTheDoor;
+        private System.Windows.Forms.Button buttonCheck;
+        private System.Windows.Forms.Button buttonHide;
     }
 }
 

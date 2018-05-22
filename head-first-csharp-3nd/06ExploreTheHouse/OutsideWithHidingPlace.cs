@@ -20,7 +20,8 @@ namespace _06ExploreTheHouse
         {
             get
             {
-                string newDescription = base.Description;
+                string newDescription = base.Description + "\r\n" 
+                    + "Someone can hide in " + NameOfHidingPlace;
                 if (hot)
                     newDescription += " It's very hot.";
                 return newDescription;

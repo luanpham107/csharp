@@ -29,10 +29,16 @@ namespace _06ExploreTheHouse
         OutsideWithDoor backYard;
         OutsideWithHidingPlace garden;
 
+        Opponent opponent;
+        Random random = new Random();
+
+        UInt16 numUserGuess;
+
+
         public Form1()
         {
             InitializeComponent();
-           
+            numUserGuess = 0;
 
             CreateObjects();
             MoveToNewLocation(livingRoom);
@@ -56,15 +62,21 @@ namespace _06ExploreTheHouse
             backYard = new OutsideWithDoor("back yard", false, "back yard is connected to Kitchen");
             garden = new OutsideWithHidingPlace("garden", true, " shed");
 
-            livingRoom.Exits = new Location[] { frontYard, backYard, upstairsHallway};
+            opponent = new Opponent(livingRoom, random);
+
+            livingRoom.Exits = new Location[] { frontYard, diningRoom, upstairsHallway};
             frontYard.Exits = new Location[] { livingRoom, driveWay };
             diningRoom.Exits = new Location[] { livingRoom, kitchen };
             kitchen.Exits = new Location[] { diningRoom, backYard };
             backYard.Exits = new Location[] { kitchen, driveWay };
-            upstairsHallway.Exits = new Location[] {bedRoomMaster, bedRoomSmall, bathRoom };
+            upstairsHallway.Exits = new Location[] {bedRoomMaster, bedRoomSmall, bathRoom , livingRoom};
             bedRoomMaster.Exits = new Location[] { upstairsHallway };
             bathRoom.Exits = new Location[] { upstairsHallway };
             bedRoomSmall.Exits = new Location[] { upstairsHallway };
+            backYard.Exits = new Location[] { garden, kitchen };
+            garden.Exits = new Location[] { frontYard, backYard, driveWay};
+            frontYard.Exits = new Location[] { garden, livingRoom };
+            driveWay.Exits = new Location[] { garden };
 
             livingRoom.DoorLocation = frontYard;
             kitchen.DoorLocation = backYard;
@@ -84,9 +96,9 @@ namespace _06ExploreTheHouse
                 textBoxShowDescription.Text = currentLocation.Description;
 
                 if (currentLocation is IHasExteriorDoor)
-                    buttonGoThroughTheDoor.Visible = true;
+                    buttonGoThroughTheDoor.Enabled = true;
                 else
-                    buttonGoThroughTheDoor.Visible = false;
+                    buttonGoThroughTheDoor.Enabled = false;
 
             }
             catch (Exception ex)
@@ -96,7 +108,19 @@ namespace _06ExploreTheHouse
             
                     
 
-        }       
+        }   
+        
+        private void ResetGame()
+        {
+            numUserGuess = 0;
+            buttonHide.Enabled = true;
+            buttonCheck.Enabled = false;
+            if (currentLocation is IHidingPlace)
+                textBoxShowDescription.Text = "You found your oppnent in " + currentLocation.Name
+                    + ", in the" + (currentLocation as IHidingPlace).NameOfHidingPlace;
+            else
+                textBoxShowDescription.Text = "You found your oppnent is standing in " + currentLocation.Name;                    
+        }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -105,6 +129,46 @@ namespace _06ExploreTheHouse
         private void buttonGoHere_Click(object sender, EventArgs e)
         {
             MoveToNewLocation(currentLocation.Exits[comboBoxLocation.SelectedIndex]);
+        }
+
+        private void buttonCheck_Click(object sender, EventArgs e)
+        {
+            numUserGuess++;
+            if (opponent.check(currentLocation))
+            {
+                textBoxShowDescription.AppendText("\r\nYou are right, number of guess: " + numUserGuess);
+                Application.DoEvents();
+                System.Threading.Thread.Sleep(500);
+                ResetGame();
+                for(int i = 0; i < 5; i++)
+                {
+                    if(i< 1 )
+                        textBoxShowDescription.Text = "Game reset in " + i + " second";
+                    else
+                        textBoxShowDescription.Text = "Game reset in " + i + " seconds";
+                    System.Threading.Thread.Sleep(1000);
+                }
+                textBoxShowDescription.Text = "Game reset";
+
+            }
+            else
+                textBoxShowDescription.AppendText("\r\nYou are wrong, try again!");
+        }
+
+        private void buttonHide_Click(object sender, EventArgs e)
+        {
+            for(int i = 1; i <= 10; i++)
+            {
+                opponent.Move();
+                textBoxShowDescription.Text = i + " ";
+                Application.DoEvents();
+                System.Threading.Thread.Sleep(200);
+            }
+            textBoxShowDescription.AppendText("\r\nGame Start!");
+            buttonCheck.Enabled = true;
+            buttonHide.Enabled = false;
+
+
         }
     }
 }
