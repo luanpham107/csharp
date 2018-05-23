@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06BeehiveManagement", "Beeh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06ExploreTheHouse", "06ExploreTheHouse\06ExploreTheHouse.csproj", "{E3FFE2A3-0ABD-49D7-807E-B8C35630E5B6}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08CollectionExercise", "08CollectionExercise\08CollectionExercise.csproj", "{C7CFB559-7E3B-452D-9A09-2B06ACC59278}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08TwoDecks", "08TwoDecks\08TwoDecks.csproj", "{063DE47E-6FEB-4546-A642-A42FCE96D0FE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{E3FFE2A3-0ABD-49D7-807E-B8C35630E5B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3FFE2A3-0ABD-49D7-807E-B8C35630E5B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3FFE2A3-0ABD-49D7-807E-B8C35630E5B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7CFB559-7E3B-452D-9A09-2B06ACC59278}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7CFB559-7E3B-452D-9A09-2B06ACC59278}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7CFB559-7E3B-452D-9A09-2B06ACC59278}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7CFB559-7E3B-452D-9A09-2B06ACC59278}.Release|Any CPU.Build.0 = Release|Any CPU
+		{063DE47E-6FEB-4546-A642-A42FCE96D0FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{063DE47E-6FEB-4546-A642-A42FCE96D0FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{063DE47E-6FEB-4546-A642-A42FCE96D0FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{063DE47E-6FEB-4546-A642-A42FCE96D0FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

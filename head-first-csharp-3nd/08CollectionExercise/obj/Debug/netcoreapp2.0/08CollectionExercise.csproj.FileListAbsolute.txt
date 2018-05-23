@@ -1,0 +1,11 @@
+C:\Users\Liam\source\repos\Csharp\head-first-csharp-3nd\08CollectionExercise\bin\Debug\netcoreapp2.0\08CollectionExercise.deps.json
+C:\Users\Liam\source\repos\Csharp\head-first-csharp-3nd\08CollectionExercise\bin\Debug\netcoreapp2.0\08CollectionExercise.runtimeconfig.json
+C:\Users\Liam\source\repos\Csharp\head-first-csharp-3nd\08CollectionExercise\bin\Debug\netcoreapp2.0\08CollectionExercise.runtimeconfig.dev.json
+C:\Users\Liam\source\repos\Csharp\head-first-csharp-3nd\08CollectionExercise\bin\Debug\netcoreapp2.0\08CollectionExercise.dll
+C:\Users\Liam\source\repos\Csharp\head-first-csharp-3nd\08CollectionExercise\bin\Debug\netcoreapp2.0\08CollectionExercise.pdb
+C:\Users\Liam\source\repos\Csharp\head-first-csharp-3nd\08CollectionExercise\obj\Debug\netcoreapp2.0\08CollectionExercise.csprojResolveAssemblyReference.cache
+C:\Users\Liam\source\repos\Csharp\head-first-csharp-3nd\08CollectionExercise\obj\Debug\netcoreapp2.0\08CollectionExercise.csproj.CoreCompileInputs.cache
+C:\Users\Liam\source\repos\Csharp\head-first-csharp-3nd\08CollectionExercise\obj\Debug\netcoreapp2.0\08CollectionExercise.AssemblyInfoInputs.cache
+C:\Users\Liam\source\repos\Csharp\head-first-csharp-3nd\08CollectionExercise\obj\Debug\netcoreapp2.0\08CollectionExercise.AssemblyInfo.cs
+C:\Users\Liam\source\repos\Csharp\head-first-csharp-3nd\08CollectionExercise\obj\Debug\netcoreapp2.0\08CollectionExercise.dll
+C:\Users\Liam\source\repos\Csharp\head-first-csharp-3nd\08CollectionExercise\obj\Debug\netcoreapp2.0\08CollectionExercise.pdb
