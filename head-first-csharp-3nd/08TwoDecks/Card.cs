@@ -4,7 +4,7 @@ using System.Text;
 
 namespace _08TwoDecks
 {
-    enum Suits
+    public enum Suits
     {
         Spades,
         Clubs,
@@ -12,7 +12,7 @@ namespace _08TwoDecks
         Hearts
     }
 
-    enum Values
+    public enum Values
     {
         Ace = 1,
         Two = 2,
@@ -29,7 +29,7 @@ namespace _08TwoDecks
         King = 13
     }
 
-    class Card
+    public class Card
     {
         public Suits Suit { get; set; }
         public Values Value { get; set; }

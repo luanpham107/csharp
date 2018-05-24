@@ -66,6 +66,7 @@
             this.buttonRight.TabIndex = 4;
             this.buttonRight.Text = ">>";
             this.buttonRight.UseVisualStyleBackColor = true;
+            this.buttonRight.Click += new System.EventHandler(this.buttonRight_Click);
             // 
             // buttonLeft
             // 
@@ -75,6 +76,7 @@
             this.buttonLeft.TabIndex = 5;
             this.buttonLeft.Text = "<<";
             this.buttonLeft.UseVisualStyleBackColor = true;
+            this.buttonLeft.Click += new System.EventHandler(this.buttonLeft_Click);
             // 
             // buttonResetDeck1
             // 
@@ -84,6 +86,7 @@
             this.buttonResetDeck1.TabIndex = 6;
             this.buttonResetDeck1.Text = "Reset Deck #1";
             this.buttonResetDeck1.UseVisualStyleBackColor = true;
+            this.buttonResetDeck1.Click += new System.EventHandler(this.buttonResetDeck1_Click);
             // 
             // buttonShuffleDeck1
             // 
@@ -93,6 +96,7 @@
             this.buttonShuffleDeck1.TabIndex = 7;
             this.buttonShuffleDeck1.Text = "Shuffle Deck #1";
             this.buttonShuffleDeck1.UseVisualStyleBackColor = true;
+            this.buttonShuffleDeck1.Click += new System.EventHandler(this.buttonShuffleDeck1_Click);
             // 
             // buttonShuffleDeck2
             // 
@@ -102,6 +106,7 @@
             this.buttonShuffleDeck2.TabIndex = 9;
             this.buttonShuffleDeck2.Text = "Shuffle Deck #2";
             this.buttonShuffleDeck2.UseVisualStyleBackColor = true;
+            this.buttonShuffleDeck2.Click += new System.EventHandler(this.buttonShuffleDeck2_Click);
             // 
             // buttonResetDeck2
             // 
@@ -111,6 +116,7 @@
             this.buttonResetDeck2.TabIndex = 8;
             this.buttonResetDeck2.Text = "Reset Deck #2";
             this.buttonResetDeck2.UseVisualStyleBackColor = true;
+            this.buttonResetDeck2.Click += new System.EventHandler(this.buttonResetDeck2_Click);
             // 
             // listBoxDeck1
             // 

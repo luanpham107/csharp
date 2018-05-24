@@ -18,13 +18,3 @@ C:\Users\Liam\source\repos\Csharp\ADayAtTheRace\ADayAtTheRace\obj\Debug\ADayAtTh
 C:\Users\Liam\source\repos\Csharp\ADayAtTheRace\ADayAtTheRace\obj\Debug\ADayAtTheRace.csproj.CoreCompileInputs.cache
 C:\Users\Liam\source\repos\Csharp\ADayAtTheRace\ADayAtTheRace\obj\Debug\ADayAtTheRace.exe
 C:\Users\Liam\source\repos\Csharp\ADayAtTheRace\ADayAtTheRace\obj\Debug\ADayAtTheRace.pdb
-C:\Users\Liam\source\repos\Csharp\head-first-csharp-3nd\ADayAtTheRace\bin\Debug\ADayAtTheRace.exe.config
-C:\Users\Liam\source\repos\Csharp\head-first-csharp-3nd\ADayAtTheRace\bin\Debug\ADayAtTheRace.exe
-C:\Users\Liam\source\repos\Csharp\head-first-csharp-3nd\ADayAtTheRace\bin\Debug\ADayAtTheRace.pdb
-C:\Users\Liam\source\repos\Csharp\head-first-csharp-3nd\ADayAtTheRace\obj\Debug\ADayAtTheRace.csprojResolveAssemblyReference.cache
-C:\Users\Liam\source\repos\Csharp\head-first-csharp-3nd\ADayAtTheRace\obj\Debug\ADayAtTheRace.Form1.resources
-C:\Users\Liam\source\repos\Csharp\head-first-csharp-3nd\ADayAtTheRace\obj\Debug\ADayAtTheRace.Properties.Resources.resources
-C:\Users\Liam\source\repos\Csharp\head-first-csharp-3nd\ADayAtTheRace\obj\Debug\ADayAtTheRace.csproj.GenerateResource.cache
-C:\Users\Liam\source\repos\Csharp\head-first-csharp-3nd\ADayAtTheRace\obj\Debug\ADayAtTheRace.csproj.CoreCompileInputs.cache
-C:\Users\Liam\source\repos\Csharp\head-first-csharp-3nd\ADayAtTheRace\obj\Debug\ADayAtTheRace.exe
-C:\Users\Liam\source\repos\Csharp\head-first-csharp-3nd\ADayAtTheRace\obj\Debug\ADayAtTheRace.pdb
