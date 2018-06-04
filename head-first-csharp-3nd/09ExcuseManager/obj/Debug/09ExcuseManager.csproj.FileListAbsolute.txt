@@ -1,0 +1,10 @@
+C:\Users\Liam\source\repos\Csharp\head-first-csharp-3nd\09ExcuseManager\bin\Debug\09ExcuseManager.exe.config
+C:\Users\Liam\source\repos\Csharp\head-first-csharp-3nd\09ExcuseManager\bin\Debug\09ExcuseManager.exe
+C:\Users\Liam\source\repos\Csharp\head-first-csharp-3nd\09ExcuseManager\bin\Debug\09ExcuseManager.pdb
+C:\Users\Liam\source\repos\Csharp\head-first-csharp-3nd\09ExcuseManager\obj\Debug\09ExcuseManager.csprojResolveAssemblyReference.cache
+C:\Users\Liam\source\repos\Csharp\head-first-csharp-3nd\09ExcuseManager\obj\Debug\_09ExcuseManager.Form1.resources
+C:\Users\Liam\source\repos\Csharp\head-first-csharp-3nd\09ExcuseManager\obj\Debug\_09ExcuseManager.Properties.Resources.resources
+C:\Users\Liam\source\repos\Csharp\head-first-csharp-3nd\09ExcuseManager\obj\Debug\09ExcuseManager.csproj.GenerateResource.cache
+C:\Users\Liam\source\repos\Csharp\head-first-csharp-3nd\09ExcuseManager\obj\Debug\09ExcuseManager.csproj.CoreCompileInputs.cache
+C:\Users\Liam\source\repos\Csharp\head-first-csharp-3nd\09ExcuseManager\obj\Debug\09ExcuseManager.exe
+C:\Users\Liam\source\repos\Csharp\head-first-csharp-3nd\09ExcuseManager\obj\Debug\09ExcuseManager.pdb

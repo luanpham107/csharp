@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08TwoDecks", "08TwoDecks\08
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08BreakfastLumberjack", "08BreakfastLumberjack\08BreakfastLumberjack.csproj", "{F4C22912-B9E1-4A76-B18A-7C95537C8DDB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09ExcuseManager", "09ExcuseManager\09ExcuseManager.csproj", "{45A6885A-F9BB-4194-AD64-00FB1C0F5A0E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{F4C22912-B9E1-4A76-B18A-7C95537C8DDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4C22912-B9E1-4A76-B18A-7C95537C8DDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4C22912-B9E1-4A76-B18A-7C95537C8DDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45A6885A-F9BB-4194-AD64-00FB1C0F5A0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45A6885A-F9BB-4194-AD64-00FB1C0F5A0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45A6885A-F9BB-4194-AD64-00FB1C0F5A0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45A6885A-F9BB-4194-AD64-00FB1C0F5A0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
